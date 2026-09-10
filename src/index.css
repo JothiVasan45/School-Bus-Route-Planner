@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-surface text-slate-100 font-sans antialiased;
+    background: linear-gradient(135deg, #0f172a 0%, #0d1a2d 100%);
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-600 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-card rounded-xl border border-border p-6 shadow-lg;
+  }
+  .card-sm {
+    @apply bg-card rounded-lg border border-border p-4 shadow-md;
+  }
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-500 text-white font-semibold px-5 py-2.5 rounded-lg
+           transition-all duration-200 shadow-md hover:shadow-primary-600/30
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-surface
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-slate-700 hover:bg-slate-600 text-white font-medium px-5 py-2.5 rounded-lg
+           transition-all duration-200 border border-slate-600
+           focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-surface;
+  }
+  .btn-danger {
+    @apply bg-red-700 hover:bg-red-600 text-white font-semibold px-5 py-2.5 rounded-lg
+           transition-all duration-200 shadow-md;
+  }
+  .btn-success {
+    @apply bg-emerald-700 hover:bg-emerald-600 text-white font-semibold px-5 py-2.5 rounded-lg
+           transition-all duration-200;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+  .badge-hard {
+    @apply badge bg-red-950 text-red-300 border border-red-800;
+  }
+  .badge-soft {
+    @apply badge bg-amber-950 text-amber-300 border border-amber-800;
+  }
+  .badge-pass {
+    @apply badge bg-emerald-950 text-emerald-300 border border-emerald-800;
+  }
+  .badge-fail {
+    @apply badge bg-red-950 text-red-300 border border-red-800;
+  }
+  .badge-online {
+    @apply badge bg-emerald-950 text-emerald-300 border border-emerald-700;
+  }
+  .badge-offline {
+    @apply badge bg-red-950 text-red-300 border border-red-700 animate-pulse;
+  }
+  .badge-warning {
+    @apply badge bg-amber-950 text-amber-300 border border-amber-700;
+  }
+  .input {
+    @apply bg-slate-800 border border-slate-600 text-slate-100 rounded-lg px-4 py-2.5
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500
+           placeholder-slate-500 transition-colors;
+  }
+  .select {
+    @apply bg-slate-800 border border-slate-600 text-slate-100 rounded-lg px-4 py-2.5
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500
+           transition-colors cursor-pointer;
+  }
+  .label {
+    @apply text-slate-400 text-sm font-medium mb-1.5 block;
+  }
+  .nav-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-400 hover:text-white
+           hover:bg-slate-700/60 transition-all duration-200 text-sm font-medium;
+  }
+  .nav-link-active {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-white
+           bg-primary-600/20 border border-primary-600/40 text-sm font-medium;
+  }
+  .kpi-card {
+    @apply card flex flex-col gap-1;
+  }
+  .kpi-value {
+    @apply text-3xl font-bold text-white;
+  }
+  .kpi-label {
+    @apply text-sm text-slate-400;
+  }
+  .kpi-change-positive {
+    @apply text-emerald-400 text-xs font-medium flex items-center gap-1;
+  }
+  .kpi-change-negative {
+    @apply text-red-400 text-xs font-medium flex items-center gap-1;
+  }
+  .section-title {
+    @apply text-lg font-semibold text-white mb-4;
+  }
+  .table-wrapper {
+    @apply overflow-x-auto rounded-lg border border-border;
+  }
+  .table {
+    @apply w-full text-sm;
+  }
+  .table th {
+    @apply bg-slate-800 text-slate-300 font-semibold px-4 py-3 text-left border-b border-border;
+  }
+  .table td {
+    @apply px-4 py-3 text-slate-200 border-b border-border/50;
+  }
+  .table tr:last-child td {
+    @apply border-b-0;
+  }
+  .table tr:hover td {
+    @apply bg-slate-700/30;
+  }
+  .status-good {
+    @apply text-emerald-400 font-medium;
+  }
+  .status-warning {
+    @apply text-amber-400 font-medium;
+  }
+  .status-critical {
+    @apply text-red-400 font-medium;
+  }
+  .progress-bar {
+    @apply h-2 rounded-full overflow-hidden bg-slate-700;
+  }
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-700;
+  }
+  .metric-row {
+    @apply flex items-center justify-between py-2 border-b border-border/50 last:border-0;
+  }
+  .metric-label {
+    @apply text-slate-400 text-sm;
+  }
+  .metric-value {
+    @apply text-white font-semibold;
+  }
+}
+
+/* Leaflet dark theme overrides */
+.leaflet-container {
+  background: #1e293b !important;
+  border-radius: 0.75rem;
+}
+.leaflet-tile {
+  filter: brightness(0.7) saturate(0.8) hue-rotate(180deg);
+}
+.leaflet-popup-content-wrapper {
+  background: #1e293b !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 8px !important;
+}
+.leaflet-popup-tip {
+  background: #1e293b !important;
+}
+
+/* Custom animations */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
+}
+.glow-green {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.15);
+}
+.glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.15);
+}
