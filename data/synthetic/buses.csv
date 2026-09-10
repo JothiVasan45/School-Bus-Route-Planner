@@ -1,0 +1,11 @@
+bus_id,registration,capacity,available_start_time,available_end_time,fuel_type,is_active,current_driver_id,notes
+BUS01,TN76 AB 7912,50,06:00,09:30,diesel,True,,
+BUS02,TN04 AB 2535,40,06:00,09:30,diesel,True,,
+BUS03,TN30 AB 9279,30,06:00,09:30,diesel,True,,
+BUS04,TN72 AB 4257,50,06:00,09:30,electric,True,,
+BUS05,TN29 AB 8359,40,06:00,09:30,cng,True,,
+BUS06,TN01 AB 3615,50,06:00,09:30,electric,True,,
+BUS07,TN44 AB 5552,50,06:00,09:30,diesel,True,,
+BUS08,TN28 AB 6514,40,06:00,09:30,diesel,True,,
+BUS09,TN12 AB 7224,20,06:00,09:30,diesel,True,,
+BUS10,TN46 AB 6635,30,06:00,09:30,cng,True,,

@@ -1,0 +1,11 @@
+driver_id,driver_name,shift_start,shift_end,max_shift_minutes,max_driving_minutes,break_requirement,availability,license_type,phone,years_experience,workload_score
+DRV01,Arjun Krishnamurthy,06:30,09:30,210,180,30,True,Heavy,+91 9895822412,4,0.0
+DRV02,Bala Subramaniam,06:00,09:30,210,180,30,True,Heavy,+91 9824942603,19,0.0
+DRV03,Chandran Pillai,06:00,09:30,225,180,30,True,Heavy,+91 9813356886,16,0.0
+DRV04,Deepak Venkatesh,06:15,09:30,210,180,30,True,Heavy,+91 9846913810,15,0.0
+DRV05,Eswaran Natarajan,06:15,09:30,195,180,30,True,Heavy,+91 9842868828,8,0.0
+DRV06,Farook Rahman,06:15,09:30,210,180,30,True,Heavy,+91 9839958838,14,0.0
+DRV07,Ganesan Murugan,05:45,09:30,195,165,30,True,Heavy,+91 9828728463,10,0.0
+DRV08,Hari Prasad,05:45,09:30,225,180,30,True,Heavy,+91 9823756669,14,0.0
+DRV09,Ilayaraja Selvam,05:45,09:30,195,165,30,True,Heavy,+91 9883197857,20,0.0
+DRV10,Jayakumar Ravi,06:00,09:30,210,180,30,True,Heavy,+91 9821668732,9,0.0
